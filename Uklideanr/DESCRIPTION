@@ -1,0 +1,12 @@
+Package: Uklideanr
+Type: Package
+Title: Euclidean Algorithm
+Version: 1.0
+Date: 2016-09-21
+Authors@R: person("Joshua", "Developer", role = c("aut", "cre"),
+		     email = "joshu107@student.liu.se")
+Description: Euclidean algorithm used to find the greatest common divisor of two
+    integers.
+License: Unknown
+LazyData: true
+RoxygenNote: 5.0.1
