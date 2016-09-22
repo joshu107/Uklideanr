@@ -8,13 +8,23 @@
 #' euclidean(16, 16)
 #' @references https://en.wikipedia.org/wiki/Euclidean_algorithm
 euclidean <- function (a, b) {
-  if (!is.integer(a) | (!is.integer(b))) {
-    stop("Both input variables must be integers!")
+  if (length(a) > 1 || length(b) > 1) {
+    stop("a and b can only be vectors with the length 1.")
   }
-  while (b != 0) {
+  
+  if (!is.numeric(a) || !is.numeric(b)) {
+    stop("a and b have to be numerical.")
+  }
+  
+  if (a == 0 && b == 0) {
+    stop("GCD for both zeros not defined.")
+  }
+  else {
+    while (b != 0) {
     t <- b
     b <- a %%b
     a <- t
   }
   return (a)
+  }
 }
